@@ -35,6 +35,7 @@ test("random table", async ({ page }) => {
                 .locator("td")
                 .nth(cpuIndex)
                 .innerText();
+            break;
         }
     }
 
