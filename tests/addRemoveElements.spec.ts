@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("has title", async ({ page }) => {
+test("add or remove elements", async ({ page }) => {
     await page.goto("https://practice.expandtesting.com/add-remove-elements");
 
     // Expect a title "to contain" a substring.
