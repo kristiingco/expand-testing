@@ -25,4 +25,6 @@ test("browser information", async ({ page }) => {
     await expect(source.locator(".red")).toHaveCount(0);
     await expect(source.locator(".blue")).toHaveCount(0);
     await expect(source.locator(".green")).toHaveCount(0);
+
+    await page.close();
 });

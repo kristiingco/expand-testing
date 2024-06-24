@@ -20,4 +20,6 @@ test("notification", async ({ page }) => {
     await page.getByLabel("Close").click();
 
     await expect(alert).not.toBeVisible();
+
+    await page.close();
 });

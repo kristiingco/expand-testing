@@ -40,4 +40,6 @@ test("random table", async ({ page }) => {
     }
 
     expect(cpuPercentageSummary).toEqual(cpuPercentageInTable);
+
+    await page.close();
 });

@@ -53,4 +53,6 @@ test("web inputs", async ({ page }) => {
     await expect(textOutput).not.toBeVisible();
     await expect(passwordOutput).not.toBeVisible();
     await expect(dateOutput).not.toBeVisible();
+
+    await page.close();
 });

@@ -22,4 +22,6 @@ test("browser information", async ({ page }) => {
 
     await expect(columns.first()).not.toHaveText("A");
     await expect(columns.last()).not.toHaveText("B");
+
+    await page.close();
 });

@@ -25,4 +25,6 @@ test("add or remove elements", async ({ page }) => {
     await expect(
         page.getByRole("button", { name: "Delete" })
     ).not.toBeVisible();
+
+    await page.close();
 });

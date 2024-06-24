@@ -17,4 +17,6 @@ test("browser information", async ({ page }) => {
             await expect(radioButtons.nth(i)).toBeChecked();
         }
     }
+
+    await page.close();
 });

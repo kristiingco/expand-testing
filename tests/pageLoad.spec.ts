@@ -5,4 +5,6 @@ test("page load", async ({ page }) => {
 
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/Practice Test Automation/);
+
+    await page.close();
 });

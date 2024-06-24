@@ -27,4 +27,6 @@ test("browser information", async ({ page }) => {
     await toggleBrowserButton.click();
     expect(await toggleBrowserButton.innerText()).toContain("Show");
     await expect(table).not.toBeVisible();
+
+    await page.close();
 });
