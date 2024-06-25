@@ -1,12 +1,12 @@
 import { test, expect } from "@playwright/test";
+import { launchSite } from "../utilities/launch";
 
 test.describe("login", () => {
     test("login form page loads", async ({ page }) => {
-        await page.goto("https://practice.expandtesting.com/login");
-
-        // Expect a title "to contain" a substring.
-        await expect(page).toHaveTitle(
-            /Login form page for Automation Testing Practice/
+        await launchSite(
+            page,
+            "https://practice.expandtesting.com/login",
+            "Login form page for Automation Testing Practice"
         );
 
         await page.close();

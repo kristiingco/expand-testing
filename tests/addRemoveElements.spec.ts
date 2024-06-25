@@ -1,10 +1,10 @@
 import { test, expect } from "@playwright/test";
+import { launchSite } from "../utilities/launch";
 
 test("add or remove elements", async ({ page }) => {
-    await page.goto("https://practice.expandtesting.com/add-remove-elements");
-
-    // Expect a title "to contain" a substring.
-    await expect(page).toHaveTitle(
+    await launchSite(
+        page,
+        "https://practice.expandtesting.com/add-remove-elements",
         "Web Elements (Add and Remove) page for Automation Testing Practice"
     );
 

@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
+import { launchSite } from "../utilities/launch";
 
 test("browser information", async ({ page }) => {
-    await page.goto("https://practice.expandtesting.com/drag-and-drop-circles");
-
-    // Expect a title "to contain" a substring.
-    await expect(page).toHaveTitle(
-        /Drag and Drop Circles page for Automation Testing Practice/
+    await launchSite(
+        page,
+        "https://practice.expandtesting.com/drag-and-drop-circles",
+        "Drag and Drop Circles page for Automation Testing Practice"
     );
 
     const target = page.locator("#target");

@@ -1,13 +1,13 @@
 import { test, expect } from "@playwright/test";
 import MailosaurClient from "mailosaur";
+import { launchSite } from "../utilities/launch";
 
 test.describe("forgot password", () => {
     test("forgot password page loads", async ({ page }) => {
-        await page.goto("https://practice.expandtesting.com/forgot-password");
-
-        // Expect a title "to contain" a substring.
-        await expect(page).toHaveTitle(
-            /Forgot Password form page for Automation Testing Practice/
+        await launchSite(
+            page,
+            "https://practice.expandtesting.com/forgot-password",
+            "Forgot Password form page for Automation Testing Practice"
         );
 
         await page.close();
